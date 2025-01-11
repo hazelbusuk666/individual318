@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:black;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #1B1B1B;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        
+        }
+
+        @keyframes moveTitle {
+            0% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .memory-text {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            margin-top: 10px;
+            padding: 10px;
+            font-style: italic;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            gap: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            background-color: white;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        .gallery-item {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards;
+        }
+
+        .gallery-item:nth-child(odd) {
+            animation-delay: 0.2s;
+        }
+
+        .gallery-item:nth-child(even) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #1B1B1B;
+            color: white;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+	<div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="biodata.html">About me</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+
+    <div class="memory-text">
+        "THIS ARE THE MOMENT THAT KEEP ME ALIVE."
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery-item"><img src="gambar1.jpg" alt="Image 1"></div>
+        <div class="gallery-item"><img src="gambar2.jpg" alt="Image 2"></div>
+        <div class="gallery-item"><img src="gambar3.jpg" alt="Image 3"></div>
+        <div class="gallery-item"><img src="gambar4.jpg" alt="Image 4"></div>
+        <div class="gallery-item"><img src="gambar5.jpg" alt="Image 5"></div>
+        <div class="gallery-item"><img src="gambar6.jpg" alt="Image 6"></div>
+        <div class="gallery-item"><img src="gambar7.jpg" alt="Image 7"></div>
+        <div class="gallery-item"><img src="gambar8.jpg" alt="Image 8"></div>
+        <div class="gallery-item"><img src="gambar9.jpg" alt="Image 9"></div>
+        <div class="gallery-item"><img src="gambar10.jpg" alt="Image 10"></div>
+        <div class="gallery-item"><img src="gambar11.jpg" alt="Image 11"></div>
+        <div class="gallery-item"><img src="gambar12.jpg" alt="Image 12"></div>
+    </div>
+
+ 
+    <div class="footer">
+        <p>DANISH HAZEL BIN ZAMRI</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+        .header {
+            background-image: url('purple.webp');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            animation: textAnimation 3s ease-in-out infinite;
+        }
+        .header p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        @keyframes textAnimation {
+            0% {
+                transform: scale(1);
+                color: white;
+            }
+            50% {
+                transform: scale(1.2);
+                color: yellow;
+            }
+            100% {
+                transform: scale(1);
+                color: white;
+            }
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #1B1B1B;
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: black;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        .content-text {
+            flex: 1;
+            color: purple;
+        }
+        .content-text h2 {
+            text-align: left;
+            margin: 0 0 15px 0;
+        }
+        .content-text ul {
+            list-style: none;
+            padding: 0;
+        }
+        .content-text ul li {
+            margin: 5px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+        .content-img {
+            flex: 0.5;
+            text-align: center;
+        }
+        .content-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+  
+        .social-icons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #1B1B1B;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #555;
+        }
+
+        .social-icons img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #1B1B1B;
+            color: white;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="biodata.html">About Me</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+
+
+    <section id="home">
+        <div class="header">
+            <h1>HI </h1>
+            <h3>This is my trash websites</h3>
+        </div>
+
+        <div class="content">
+            <div class="content-text">
+                <h2>Hello, My name is Mohamad Danish Hazel Bin Zamri</h2>
+                <ul>
+                    <li>I am a final year student from Diploma in Information Management     from Universiti Teknologi MARA (UiTM), Kelantan Branch.</li>
+                </ul>
+
+            </div>
+            <div class="content-img">
+                <img src="hazel.jpeg" alt="hazel">
+            </div>
+        </div>
+    </section>
+
+    <div class="social-icons">
+        <a href="https://wa.link/n6rx6p" target="_blank" title="WhatsApp">
+            <img src="ws.webp" alt="WhatsApp">
+        </a>
+ 
+    </div>
+
+    <div class="footer">
+        <p> DANISH HAZEL BIN ZAMRI</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #1B1B1B;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: purple;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 1.5);
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 15px;
+        }
+
+        th {
+            background-color: #1B1B1B;
+            color: white;
+        }
+
+        td {
+            background-color: #f8f8f8;
+        }
+
+        .btn-open {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn-open:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #1B1B1B;
+            color: white;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+
+ 
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            margin: 10% auto;
+            display: block;
+            max-width: 80%;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: purple;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .modal-close:hover,
+        .modal-close:focus {
+            color: purple;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+     
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+ 
+  <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="biodata.html">About me</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+
+ 
+    <div class="content">
+        <h2> Hazel's Work Experience</h2>
+        <p>Several jobs for me to keep on living.</p>
+
+      
+        <table>
+            <thead>
+                <tr>
+                    <th>Job Title</th>
+                    <th>Company</th>
+                    <th>Duration</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Steward</td>
+                    <td>Resord world Kijal</td>
+                    <td> 19 feb 2024 - 24 march 2024</td>
+                    <td><button class="btn-open" onclick="openModal('steward')">Open</button></td>
+                </tr>
+                <tr>
+                    <td>mini mart</td>
+                    <td>own by local in kemaman</td>
+                    <td> 20 april 2021- 29 july 2021</td>
+                    <td><button class="btn-open" onclick="openModal('minimart')">Open</button></td>
+                </tr>
+                <tr>
+                    <td>cafe</td>
+                    <td>melawifornia</td>
+                    <td>20 november 2021 - 29 november 2021</td>
+                    <td><button class="btn-open" onclick="openModal('cafe')">Open</button></td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+
+   
+    <div id="stewardModal" class="modal">
+        <span class="modal-close" onclick="closeModal('steward')">&times;</span>
+        <img class="modal-content" id="stewardImg" src="steward.jpg" alt="steward">
+    </div>
+
+    <div id="minimartModal" class="modal">
+        <span class="modal-close" onclick="closeModal('minimart')">&times;</span>
+        <img class="modal-content" id="minimartImg" src="mini mart.jpg" alt="mini mart">
+    </div>
+
+    <div id="cafeModal" class="modal">
+        <span class="modal-close" onclick="closeModal('cafe')">&times;</span>
+        <img class="modal-content" id="cafeImg" src="cafe.jpg" alt="cafe">
+    </div>
+ 
+    <div class="footer">
+        <p>MOHAMAD DANISH HAZEL BIN ZAMRI</p>
+    </div>
+
+    <script>
+       
+        function openModal(experience) {
+            document.getElementById(experience + "Modal").style.display = "block";
+        }
+
+        
+        function closeModal(experience) {
+            document.getElementById(experience + "Modal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
